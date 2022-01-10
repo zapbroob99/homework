@@ -1,0 +1,38 @@
+Validating the Characters in a Password
+At the university, passwords for the campus computer system must meet the following
+requirements:
+• The password must be at least seven characters long.
+• It must contain at least one uppercase letter.
+M08_GADD8637_05_GE_C08.indd 470 28/04/2021 19:32
+8.3 Testing, Searching, and Manipulating Strings 471
+• It must contain at least one lowercase letter.
+• It must contain at least one numeric digit.
+When a student sets up his or her password, the password must be validated to ensure it
+meets these requirements. You have been asked to write the code that performs this valida-
+tion. You decide to write a function named valid_password that accepts the password
+as an argument and returns either true or false, to indicate whether it is valid. Here is the
+algorithm for the function, in pseudocode:
+valid_password function:
+Set the correct_length variable to false
+Set the has_uppercase variable to false
+Set the has_lowercase variable to false
+Set the has_digit variable to false
+If the password’s length is seven characters or greater:
+Set the correct_length variable to true
+for each character in the password:
+if the character is an uppercase letter:
+Set the has_uppercase variable to true
+if the character is a lowercase letter:
+Set the has_lowercase variable to true
+if the character isa digit:
+Set the has_digit variable to true
+If correct_length and has_uppercase and has_lowercase and has_digit:
+Set the is_valid variable to true
+else:
+Set the is_valid variable to false
+Return the is_valid variable
+Earlier (in the previous In the Spotlight section) you created a function named get_
+login_name and stored that function in the login module. Because the valid_password
+function’s purpose is related to the task of creating a student’s login account, you decide to
+store the valid_password function in the login module as well. Program 8-6 shows the
+login module with the valid_password function added to it. The function begins at line 34
